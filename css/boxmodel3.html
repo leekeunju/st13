@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmode3-boxmodel 계산법</title>
+</head>
+
+
+<style>
+.box{padding: 0;margin:0;}
+.box{
+  width: 400px;
+  height: 300px;
+  padding: 50px;
+  border: 10px solid#f86;
+  margin: 50px auto;
+  background-color: #333;
+  color: #fff;
+ 
+.box1{
+  box-sizing: content-box;
+}
+
+}
+.box2{
+  box-sizing: border-box;
+}
+</style>
+<body>
+  <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti voluptates nisi veniam, debitis laboriosam accusantium dolorum tenetur eum adipisci temporibus expedita cumque nulla illum modi a qui. Eos, cupiditate?</div>
+  <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti voluptates nisi veniam, debitis laboriosam accusantium dolorum tenetur eum adipisci temporibus expedita cumque nulla illum modi a qui. Eos, cupiditate?</div>
+
+</body>
+</html>
