@@ -27,13 +27,31 @@
       .box ul
       .box ul li{background-color: rgba(0,0,225,0.2, blue);}
       .box ul li a{
-        background-color: blue;
+        background-color: rgba(173, 15, 217, 0.259);
         padding: 0.5em 1.5em;
         display: inline-block;
       }
 
+      .box ul li a::after{
+        content: '';
+        /*.box ul li a::after 기준조상 컨테이닝박스*/
+        position: absolute;
+        left: 0; bottom: 0;
+        display: block;
+        width: 100%;
+        background-color: #000;
+        height: 4px;
+        
+       
+      }
+      
+      
+      .box ul li:hover a:after{
+        transform: all 1s;
+        transform: scale(1);
+        /*transform-origin: 100% 0;*/
 
-
+      }
   </style>
 </head>
 <body>
