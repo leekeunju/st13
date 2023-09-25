@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>전체배경이되는동영상</title>
+  
+ <style>
+  *{margin: 0;padding: 0;}
+  
+  .wrap{position: relative;}
+  /*.slogan의 기준조상*/
+  .media-box{
+    /*background-color: #ccc;*/
+    position: relative;
+    overflow: hidden;
+    /*앞에 배경색과 동영상이랑 사이즈 맞춤*/
+  }
+  .media-box:after{
+    content: '';
+    position: absolute;
+    left:0; top:0; width:100%; height:100%;
+    background-color: rgba(228, 255, 156, 0.768);
+  }
+  
+  .full-page{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  /*동영상비율을지정*/
+  .media-box .media-wrap{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+  /*.media-wrap 가로 세로 크기를 따르게 해주세요*/
+  .media-box .media-wrap .media{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+  }  
+  .slogan{
+    position: absolute;
+    left: 100px; top:200px;
+    width: 80%;    
+    color: #fff;
+    font-size: 1.5em;
+    /*background-color: #ccc;*/
+  }
+  .slogan .text1{
+    font-size: 1.5em;
+  }
+  .slogan .text2{
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-bottom: 1em;
+    position: relative;
+    text-shadow:0px 0px 5px rgba(239,119,79)
+  }
+  .slogan .text2:after{
+    content: '';
+    display: block;
+    width: 120px;height: 5px;
+    background-color: #fff;
+    position: absolute;
+    left: 0px; bottom: 0.5em;
+  }
+  .slogan .txt3
+
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+
+      <div class="media-box full-page">
+      <div class="media-wrap">
+        <video class="media"autoplay loop muted>
+          <source src="asset/glass_ball_by_the_shore (1080p).mp4">
+        </vidio>
+      </div>
+  </div>
+  </div>
+
+  <div>
+    <div class="slogan">
+      <p class="text1">Lorem, ipsum dolor.</p>
+      <p class="text2">Lorem ipsum dolor sit amet.</p>
+      <p class="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit, ratione at autem ducimus reprehenderit debitis, cum eos, quas odio sit? Pariatur vitae dolores eos, tempore tenetur ut eaque sed!</p>
+    </div>
+  </div>  
+</body>
+</html>
