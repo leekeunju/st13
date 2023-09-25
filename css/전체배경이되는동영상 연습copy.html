@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>전체배경이되는동영상</title>
+
+
+  <style>
+    *{margin:0; padding:0%;}
+
+    .wrap{
+      position: relative;
+    }
+
+    .media-box{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .media-box:after{
+      content: '';
+      position: absolute;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(208, 201, 190, 0.653);
+    }
+
+    .full-page{
+      width: 100%;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .media-box.media-warp{
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding-top:56.25%;
+      overflow: hidden;
+    }
+
+    .media-box .media-warp .media{
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      left: 50%;top:50%;
+      transform: translate(-50%,-50%);
+     }
+
+    .slogan{
+      position:absolute;
+      left:100px; top:200px;
+      width:80%;
+      color:#fff;
+      font-size:1.5em;
+    }
+    .slogan .text1{
+      font-size:1.5em;
+    }
+    .slogan .text2{
+      font-size:2.5em;
+      font-weight: bold;
+      padding-bottom:1em;
+      position: relative;
+      text-shadow:0px 0px 10px rgb(0,0,0);
+    }
+
+    .slogan .text2:after{
+      content:'';
+
+      display:block;
+      width:120px; height: 5px;
+      background-color:#fefefe;
+      position:absolute;
+      left:0px; bottom:0.5em;
+    
+      
+    }
+
+    .slogan .text3{
+      /*font-size:2.5em;*/
+      /*font-weight: bold;*/
+      padding-bottom:1em;
+      position: relative;
+      text-shadow:0px 0px 10px rgb(250, 139, 3);
+    }
+
+
+  </style>
+ 
+</head>
+
+<body>
+  <div class="wrap">
+     <!--.media-box>.media-wrap>video.media -->
+
+    <div class="media-box full-page">
+      <div class="media-wrap">
+        <video class="media" autoplay loop muted>
+          <source src="asset/glass_ball_by_the_shore (1080p).mp4">
+        </vidio>
+      </div>
+  </div>
+  </div>
+
+  <div>
+    <div class="slogan">
+      <p class="text1">Positive attitude is...</p>
+      <p class="text2">A positive attitude is a powerful force</p>
+      <p class="text3">
+      Most of us are just as happy as we make up our minds to be....
+      Most of us are just as happy as we make up our minds to be....
+      Most of us are just as happy as we make up our minds to be....
+      Most of us are just as happy as we make up our minds to be....</p>
+    </div>
+  </div>  
+</body>
+</html>
