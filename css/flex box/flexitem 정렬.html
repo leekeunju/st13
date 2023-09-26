@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexitem 정렬</title>
+
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+    .wrap{
+      width: 90%; margin: 50px auto;
+      background: #ccc;
+    }
+
+    .parent{background-color: #a3a896;}
+
+    .child{
+    background-color: rgba(252, 37, 37, 0.494);
+    border: 1px solid;
+    padding: 2em;}
+
+    .container{
+      display: flex;
+      min-height: 300px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!--.parenr.container>.child.item*4>{item$}-->
+    <div class="parent container">
+      <div class="child">item1</div>
+      <div class="child">item2</div>
+      <div class="child">item3</div>
+      <div class="child">item4</div>
+    </div>
+  </div>
+</body>
+</html>

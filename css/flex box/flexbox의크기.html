@@ -3,41 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flexbox 선언</title>
+  <title>flexbox 크기</title>
 </head>
 <style>
   *{margin:0; padding:0; box-sizing:border-box;}
 
   .parent{
-    background-color: aqua;
-    min-height: 100px;
+    background-color: rgba(181, 180, 184, 0.99);
+    min-height: 200px;
     margin-top: 50px;
 
   }
 
   .child{
-    background-color: aliceblue;
+    background-color: rgba(0,0,225,0.5);
     border: 1px solid #000;
   }
   .container{
     display: flex;
+    width: 80%;
     
   }
   .container.column{
     flex-direction: column;
   }
+  .container.row{
+    flex-direction: row;
+  }
+  .item{
+    flex-grow: 0;
+    flex-shrink: 0;
+    /*flex-basis: auto;*/
+    flex-basis: 200px;
+
+
+    width: 150px;
+  }
 
 </style>
 <body>
   <div class="wrap">
-  <div class="parent column">
+  <div class="parent container column">
     <div class="child item">item1</div>
     <div class="child item">item2</div>
     <div class="child item">item3</div>
     <div class="child item">item4</div>
     </div>
 
-  <div class="parent row">
+  <div class="parent container row">
     <div class="child item">item1</div>
     <div class="child item">item2</div>
     <div class="child item">item3</div>
