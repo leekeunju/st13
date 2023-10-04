@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+
+    .item{
+      background-color: aliceblue;
+    display: block;}
+
+    .child{background-color: #f33;
+    color: #000;
+  font-size: 2em;
+padding: 1em;}
+
+  .child p{background-color: azure;
+  border: 1px solid #000;
+max-width: 500px;}
+
+    .child p:last-child{font-size: 0.4em;}
+
+    .conrainer{
+      display: flex;
+      justify-content: center;
+      /*주축정렬가운데*/
+      align-items: center;
+    }
+    .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+    .item p{
+    flex-grow: 0;
+    flex-shrink: 1;
+
+  }
+  </style>
+</head>
+<body>
+  <h1>수직 수평 가운데정렬</h1>
+  <h2>
+    <p>주축정렬 justify-content:center</p>
+    <p>교차축정렬 align-items:center</p>
+    <p>아이템크기는고정 flex-none</p>
+  </h2>
+  
+  <div class="wrap">
+    <div class="parent contaner">
+      <div class="item">
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed asperiores odit at cumque nesciunt ea quibusdam sint nam consectetur? Asperiores aliquam dolorum iure officiis deserunt minima consequatur voluptas animi consequuntur.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
