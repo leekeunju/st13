@@ -11,12 +11,23 @@
 </head>
 <body>
   <div id="wrap">
+    <script>
+      $(document).ready(function{
+        $('.btn_sitemap').click(function() {
+		$(this).attr("aria-expanded", true);
+		$('header').toggleClass('active');
+		$('body').toggleClass('hidden');
+	});
+      }       
+      );
+    </script>
     <!-- header -->
     <header class="header_down">
       <div class="header_wrap flex-container">
         <h1 class="header_logo item">
           <a href="/"><span class="blind">네이버</span></a>
-        </h1>
+        </h1>     
+       
         <nav class="item">
           <ul class="gnb_menu" role="menu">
             <!-- .gnb_menu_list 활성화 시, on클래스 추가 // .gnb_menu_list에 호버, 포커스 시, .gnb_menu_item의 aria-expanded="true" // .gnb_dropMenu_wrap slideUp, Down -->
@@ -361,8 +372,29 @@
             </li>
           </ul>
         </nav>
-        <div class="header_util item">유틸</div>
+        <div class="header_util item">
+          <div class="header_lang">
+            <a href="/"aria-selted="true">KOR</a>
+            <a href="/"aria-selted="false">ENG</a>
+          </div>
+          <div class="header_util item">
+            
+          </div>
+            <div class="sitemap_box">
+              
+              <button class="sitemap_box">
+                <span class="btn_line">사이트맵 열고닫기</span>
+                <span class="btn_line"></span>
+                <span class="btn_line"></span>
+                <span class="btn_line"></span>
+              </button>
+            </div>
+          </div>
+        
+
+
       </div>
+
 
     </header>
     <!-- //header -->
