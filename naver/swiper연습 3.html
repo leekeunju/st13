@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swiper연습3</title>
+  <!--뒤에 '/' ..수업시간에는 왜 안들렸을까'-->
+
+    <!-- 1.swiper 관련 css 설치 -->
+    <!-- 2.swiper 플러그인 js 설치 -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+ 
+
+  <style>
+
+    *{margin: 0;padding: 0; box-sizing: border-box;}
+    .wrap{
+      width: 1000px;
+      margin: 50px auto 0;
+      border: 1px solid #000; 
+    }
+
+    .test1{
+      width: 100%;
+    }
+    .test1 .swiper-wrapper
+    .test1 .swiper-wrapper .swiper-slide{
+      border: 1px solid #f00;
+    }
+    .test1 .swiper-wrapper .swiper-slide img{
+      display: block;
+      width: 100%;
+      /*무조건 부모너비로-하지만 원래이미지 크기보다 커질수는 없다*/
+    }
+
+    /*pagination 위치변경하기*/
+    .swiper-horizontal>.test1 .swiper-pagination-bullets
+    /*.test .swiper-pagination-bullets-dynamic,*/ 
+    .test1 .swiper-pagination-horizontal
+    .test1 .swiper-pagination-custom
+    .test1 .swiper-pagination-custom-fraction{
+      top:auto;
+      bottom: 2em;
+    }       
+    
+    /*pagination css변경하기*/
+    .test1 .swiper-pagination-bullet{
+      background-color: #fff;
+      opacity: 0.8;
+      border-radius: 0;
+      width: 8px;
+      height: 4px;      
+    }
+    .test1 .swiper-pagination-bullet-active{
+      background: #f00;
+      opacity: 1;
+      width: 20px;
+    }
+
+    /*화살 색상변경>화살=아이콘폰트로 작성되있음*/
+
+    .swiper-button-next,
+    .swiper-button-prev{
+      color: #fff;
+    }     
+   
+      /*스크롤바 변경*/
+    .test1 .swiper-scrollbar{
+      background-color: rgba(225,0,0,0.2);        
+    }
+     
+    /*스크롤 진행상태*/
+    .test1 .swiper-scrollbar-drag{
+      background-color: rgba(225,0,0,0.1);        
+    }
+
+  </style>
+</head>
+
+ <!-- 3.swiper 구조에 맞는 HTML 작성하기 -->
+<body>
+  <div class="wrap">
+    <!-- Slider main container -->
+    <div class="swiper test1">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="asset/image/img_main_slide9.jpg" alt="스와프 연습1" />
+        </div>
+        <!--alt에 사진이름 넣지않아도 작동 가능? 가능하뉑-->
+        <div class="swiper-slide">
+          <img src="asset/image/img_main_slide10.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="asset/image/img_main_slide12.jpg" alt="스와프 연습3" />
+          <!--뒤에 '/' ..수업시간에는 왜 안들렸을까'-->
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+<!--안되는이유...찾은..와..div하나때문에..여기가아닌
+script 직전 스크롤바 마감디브까지 .wprp빠진거 묶었다고
+화면이 안나오다니 울뻔했네 헝.. -->
+
+   <!-- If we need pagination -->
+   <div class="swiper-pagination"></div>
+   <!-- If we need navigation buttons -->
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+   <!-- If we need scrollbar -->
+   <div class="swiper-scrollbar"></div>
+  </div>
+</div>
+
+<!--이름 설정 
+  예)땡땡떙 부분)
+  위  -Slider main container-
+  [div class="swiper-땡땡땡]변경 후 '
+  script 하단
+  const 땡땡땡 = new Swiper(sw-땡떙땡)
+  도 변경
+-->
+
+<script>
+  // 4.swiper플러그인 내 요소에 연결 
+  const test1 = new Swiper('.test1', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+
+</script>
+  
+</body>
+</html>
