@@ -162,15 +162,21 @@ header{
   height: var(--header-height);
 
   background-color: rgba(255,255,255,0.3);
-  border: 1px solid #000;
+
+}
+/*햄버거메뉴를 클릭하면 header에.active추가*/
+header.active{
+  background-color: var();
 }
 
 .header_wrap{
   max-width: 1440px;
+  height: 100%;
   margin:0 auto;
   /*  display: flex; flex-container선언 */
   justify-content: space-between;
   align-items: center; 
+
 
 }
 
@@ -184,9 +190,14 @@ header{
   width:90px; height: 20px;
   background:url(../image/header_logo.png) no-repeat 50% 50%;
 }
+header.active .header_wrap .header_logo a{
+  background-image: url(../image/[2]header_logo_v2.png);
 
 .header_wrap nav{
   height: var(--header-height);
+}
+header.active .header_wrap nav{
+
 }
 
 nav .gnb_menu{
@@ -359,9 +370,11 @@ nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify:first-child{
   opacity: 1;
   font-size: 12px;
   padding: 0 0.5em;
-  
-  
-}        
+  }        
+.header_util .header_lang a{
+  color: #fff;
+}
+
 .header_util .header_lang a:first-child::after{
   content: '';
   position: absolute;
@@ -370,8 +383,10 @@ nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify:first-child{
   width: 1px;
   height: 100%;
   background-color: #000;
-
+  
 }
+header.active .header_util .header_lang a:first-child::after{
+ background-color: #fff;}
 
 .header_util .header_lang a[aria-selcred="false"]{
   opacity: 0.7;
@@ -382,16 +397,27 @@ nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify:first-child{
 .header_util .sitemap_box{
   position: relative;
   width: 24px;
+  height:24px;
+
+}
+.header_util .sitemap_box .btn_sitmap{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0px none;
+  cursor: pointer;
 }
 .header_util .sitemap_box .btn_line{
   position: relative;
   display: block;
   width: 24px; height: 2px;
   background-color: #000;
-  transition: transform 0.2s;
-
-
+  transition: all 0.2s;
+  }
+.header_util .sitemap_box:hover .btn_line{
+  background-color: ();
 }
+
 .header_util .sitemap_box .btn_line:nth-of-type(2){top:2px;
 /*width: calc(100% - 2px);*/}
 .header_util .sitemap_box .btn_line:nth-of-type(3){top:10px;
@@ -404,21 +430,35 @@ header_active
 
 header.active .header_util .sitemap_box .btn_line{
   border-color: #fff;
-  transition: transform 0.2s;
+  transition: all 0.2s;
 }
 
 header.active .header_util .sitemap_box .btn_line:nth-of-type(2)
 {
 
-  transform: rotate(-45deg); translate: (11px);
+transform: rotate(-45deg); translate: (-8px,8px);
 }
 
 header.active .header_util .sitemap_box .btn_line:nth-of-type(3)
 
 header.active .header_util .sitemap_box .btn_line:nth-of-type(4){
   
-  transform: rotate(45deg); translate: (-11px);
+  transform: rotate(45deg); translate: (-3px,-4px);
 }
+
+
+
+
+header .sitemap{
+  display: none;
+  position: fixed;
+  left: 0; top: (var(--header-height));
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: var(--primary-color);
+}
+
+header.active .sitemap{display: block;}
 
 
 /* .container */
@@ -426,4 +466,3 @@ header.active .header_util .sitemap_box .btn_line:nth-of-type(4){
   padding:80px 0 160px;
   background-color: #ccc;/*테스트용*/
 }
-

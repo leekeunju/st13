@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>from테그</title>
+  <style>
+  
+    h1{
+      color: rgb(39, 6, 249);
+      text-shadow: none;
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>form테그</h1>
+  <form action="">
+    <fieldset><!--전체 큰 테두리-->
+      <legend>회원가입 기본</legend><!--테두리,폼테그의 제목-->
+      <ul>
+        <li><input type="text"><input type="text"></li>
+        <li><label>ID: <input type="text"></label></li><!--li테그 줄바꿈--><!--라벨로 감쌈 그뒤 for 삭제후 아이디 작성-->
+        <li><label for="pid">ID: <input type="text" id="pid"></label></li><!--li테그 줄바꿈-->
+        <li><label for="#pwd">Ph: <input type="password" id="pwd"></label></li><!--li테그 줄바꿈-->
+        <li><label for="#ptel">Tel: <input type="number" id="ptel"></label></li><!--li테그 줄바꿈-->
+      </ul>
+
+    </fieldset>
+    <fieldset>
+      <legend>input</legend>
+      <ul>
+        <li><input type="checkbox" name="" id=""></li>
+        <li>
+          <input type="checkbox" name="interest" id="interest1" checked><label for="interest1">만화책보기</label>
+          <input type="checkbox" name="interest" id="interest2"><label for="interest2">독서</label>
+          <input type="checkbox" name="interest" id="interest3"><label for="interest3">영화보기</label>
+          <input type="checkbox" name="interest" id="interest4"><label for="interest4">음악듣기</label>
+         
+        </li>
+      </ul>
+      <ul>
+        <li>
+          라디오버튼<input type="radio" name="" id=""> 
+        </li>
+        <li>
+          <label for="ship1">회사</label>
+          <input type="radio" name="ship" id="ship1">
+          <label for="ship2">집</label>
+          <input type="radio" name="ship" id="ship2">
+          <label for="ship3">친정</label>
+          <input type="radio" name="ship" id="ship3">
+          <!--네임은 동일하게 그룹화 시켜줘야한다. 아니면 다 선택되는 참사가!?ㅋㅋ-->
+        </li>
+      </ul>
+    </fieldset>
+    <!--
+      input:reset 
+      input:submit  버튼
+    -->
+    <p>
+      <input type="reset" value="취소">
+      <input type="submit" value="확인">
+      <input type="button" value="확인">
+    </p>
+
+    <p>
+      <span>버튼테그를 많이 사용함</span>
+      <button>텍스트</button>
+      <button type="submit">기본값 submit</button>
+      <button type="reset">취소</button>
+      <button type="button">버튼</button>
+    </p>
+    <p>
+      <strong>파일선택</strong>
+      <input type="file" name="" id="">
+    </p>
+    <fieldset>
+      <legend>목록메뉴</legend>
+      <ul>
+        <li>
+          <select name="" id=""multiple></select>
+          <option value="https://www.naver.com/">네이버</option>
+          <option value="https://www.daum.net/">다음</option>
+          <option value="">구글</option>
+        </li>
+        <li>
+          <select name="" id="multiple"></select>
+           <option value="https://www.naver.com/">네이버</option>
+           <option value="https://www.daum.net/">다음</option>
+           <option value="">구글</option>
+        </li>
+      </ul>
+    </fieldset>
+    <textarea name="" id="" cols="30" rows="3"></textarea>
+    <div>
+      <p></p>
+    </div>
+
+
+ 
+
+
+
+
+    
+
+  </form>
+</body>
+</html>
