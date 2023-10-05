@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자연습2</title>
+  <style>
+    body{
+      font-size: 14px;
+    }
+    .title{
+      margin: 1em;
+      font-weight: bolder;/*진하게*/
+      font-size: 25px;
+      color: blueviolet;
+    }
+    .title a{
+      color: black;
+      text-decoration: none;/*a테그 밑줄 없애기 위한 css*/
+      
+    }
+    .title a:hover{
+      color: blueviolet;
+      text-decoration: underline;
+      background-color: rgba(0,0,225,0.5);
+      padding: 0.5rem 1rem;
+    }
+    .box{
+      background-color: #ccc;
+      margin: 1em;
+      line-height: 1.5em;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header></header>
+    <div class="maim"></div>
+    <footer>
+      <div class="container" id="section1">
+        <div class="inner">
+          <div class="title"><a href="">제목</a></div>
+          <div class="desc">
+            <div class="box">Lorem, ipsum dolor.</div>    
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam recusandae quia culpa amet, in consequatur autem soluta eum assumenda doloribus voluptas quod tempore fugiat ad officiis cupiditate. Animi, voluptas.</div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="section2">
+        <div class="inner">
+          <div class="title">제목</div>
+          <div class="desc">
+            <div class="box">Lorem, ipsum dolor.</div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a quasi recusandae amet ea voluptate corporis rem eaque! Rerum optio incidunt veniam distinctio asperiores. Ipsa ratione magni hic nemo corrupti?</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
