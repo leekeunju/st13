@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .war{margin: 50px;}
+
+    .parent{
+      background-color: #ccc;
+      padding: 30px;
+
+    }
+    .child{background-color:rgba(3, 3, 255, 0.5);
+     border: 1px solid #000;
+  }
+
+    .container{
+      width: 600px;
+      height: 600px;
+      display: flex;
+      flex-wrap:wrap;
+      align-items: flex-start;
+      align-content: space-between;
+
+    }
+    .item{
+      flex:none;
+      width:33.333%;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container parent">
+      <div class="item item1 child">item1</div>
+      <div class="item item2 child">item2</div>
+      <div class="item item3 child">item3</div>
+      <div class="item item4 child">item4</div>
+      <div class="item item5 child">item5</div>
+      <div class="item item1 child">item1</div>
+      <div class="item item2 child">item2</div>
+      <div class="item item3 child">item3</div>
+      <div class="item item4 child">item4</div>
+      <div class="item item5 child">item5</div>
+      </div>
+    </div>
+</body>
+</html>

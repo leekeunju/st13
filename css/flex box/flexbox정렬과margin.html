@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .wrap{
+      margin-top: 100px;
+      background-color: #ccc;
+    }
+    /*레이아웃*/
+
+    .header{
+    /*width: 100%;*/
+    background: #999;
+    }
+
+    .header.inner{
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      background-color: rgba(rgba(0, 225, 116, 0.5));
+      border: 1px solid #f00;
+    }
+
+    .logo{
+    width: 100px;
+    height: 100px;}
+    
+
+    .util{
+    font-size: 12px;
+
+    }
+    .item{background-color: rgba(30, 160, 225, 0.5);
+    }
+
+    .parent{
+      display: flex;
+      flex-direction: row;/*진행수평방향*/
+      justify-content: flex-start;/*주축정렬*/
+      align-items: center;/*교차축정렬*/
+    }
+
+    .item{
+      flex-grow: 0; /*아이템확장여부x*/
+      flex-shrink: 1; /*아이템축소여부o*/
+      flex-basis: auto; /*주축의 width/heyght 크기  주축의 width/heyght 가 선언되어x 아이템이 포함하고 있는 내용의 크기*/
+      align-self: auto; /*교차축정렬인 align-item을 따르겠다*/
+    }
+    .gmb.item{margin-left: auto;}
+    .util.item{margin: 2em;}
+
+  </style>
+</head>
+<body>
+  <div class="wrap"></div>
+  <header>
+    <div class="inner parent">
+      <div class="logo item">로고</div>
+      <div class="gnb item">카테고리(글로벌네비게이션바)</div>
+      <div class="util item">상단유틸메뉴</div>
+    </div>
+  </header>
+</body>
+</html>

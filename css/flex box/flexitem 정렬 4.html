@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexitem 정렬-한개의아이템만 </title>
+
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .wrap{
+      width: 90%; margin: 50px auto;
+      background: #ccc;
+    }
+    .parent{background-color: #dcd3dd27;}
+
+    .child{
+    background-color: rgba(9, 248, 164, 0.908);
+    border: 1px solid;
+    padding: 2em;}
+
+    .container{
+      display: flex;
+      min-height: 300px;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .item:last-child{align-items: flex-start;}
+
+  
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="parent container">
+      <div class="child">item1</div>
+      <div class="child">item2</div>
+      <div class="child">item3</div>
+      <div class="child">item4</div>
+    </div>
+  </div>
+</body>
+</html>
